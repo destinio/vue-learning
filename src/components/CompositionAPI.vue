@@ -1,28 +1,24 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
 
-export default defineComponent({
-  data() {
-    return {
-      count: 0,
-    }
-  },
+const count = ref(0)
 
-  methods: {
-    inc(_name: string) {
-      this.count++
-    },
+function inc() {
+  count.value++
+}
 
-    dec() {
-      this.count--
-    },
-  },
+function dec() {
+  count.value--
+}
+
+onMounted(() => {
+  console.log(`The initial count is ${count.value}.`)
 })
 </script>
 
 <template>
   <div class="main">
-    <button @click="inc('joe')">+</button>
+    <button @click="inc">+</button>
     <span>{{ count }}</span>
     <button @click="dec">-</button>
   </div>
