@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import Button from './Button.vue'
 
 const count = ref(0)
 
@@ -18,9 +19,10 @@ onMounted(() => {
 
 <template>
   <div class="main">
-    <button @click="inc">+</button>
+    <div class="button" @click="inc">+</div>
     <span>{{ count }}</span>
-    <button @click="dec">-</button>
+    <div class="button" @click="dec">-</div>
+    <Button text="Click Mee" color="red" />
   </div>
 </template>
 
@@ -42,7 +44,7 @@ span {
   text-align: center;
 }
 
-button {
+.button {
   display: block;
   height: 4rem;
   width: 4rem;

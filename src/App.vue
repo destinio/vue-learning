@@ -3,9 +3,11 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
 import TsOptionsAPI from './components/TsOptionsAPI.vue'
+import CompositionAPI from './components/CompositionAPI.vue'
 </script>
 
 <template>
   <!-- <HelloWorld /> -->
-  <TsOptionsAPI />
+  <!-- <TsOptionsAPI /> -->
+  <CompositionAPI />
 </template>

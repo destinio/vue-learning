@@ -1,5 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Button from './Button.vue'
 
 export default defineComponent({
   data() {
@@ -7,16 +8,15 @@ export default defineComponent({
       count: 0,
     }
   },
-
   methods: {
     inc(_name: string) {
       this.count++
     },
-
     dec() {
       this.count--
     },
   },
+  components: { Button },
 })
 </script>
 
@@ -25,6 +25,7 @@ export default defineComponent({
     <button @click="inc('joe')">+</button>
     <span>{{ count }}</span>
     <button @click="dec">-</button>
+    <Button text="Click Mee" />
   </div>
 </template>
 
