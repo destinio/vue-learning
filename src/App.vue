@@ -4,10 +4,14 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TsOptionsAPI from './components/TsOptionsAPI.vue'
 import CompositionAPI from './components/CompositionAPI.vue'
+import FurtherComp from './components/furtherComp.vue'
+import Books from './components/books.vue'
 </script>
 
 <template>
   <!-- <HelloWorld /> -->
   <!-- <TsOptionsAPI /> -->
-  <CompositionAPI />
+  <!-- <CompositionAPI /> -->
+  <FurtherComp />
+  <Books />
 </template>

@@ -6,6 +6,9 @@ export default defineComponent({
     color: String,
     text: String,
   },
+  clicked() {
+    this.$emit('callback')
+  },
   computed: {
     style() {
       return {
@@ -16,7 +19,7 @@ export default defineComponent({
 })
 </script>
 <template>
-  <button :style="style">{{ text }}</button>
+  <button @click="" :style="style">{{ text }}</button>
 </template>
 
 <style scoped>

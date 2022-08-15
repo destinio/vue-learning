@@ -12,6 +12,10 @@ function dec() {
   count.value--
 }
 
+function handleClick() {
+  console.log('I have been clicked')
+}
+
 onMounted(() => {
   console.log(`The initial count is ${count.value}.`)
 })
@@ -22,7 +26,7 @@ onMounted(() => {
     <div class="button" @click="inc">+</div>
     <span>{{ count }}</span>
     <div class="button" @click="dec">-</div>
-    <Button text="Click Mee" color="red" />
+    <Button text="Click Mee" color="red" @created="handleClick" />
   </div>
 </template>
 
